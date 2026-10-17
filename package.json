@@ -1,0 +1,52 @@
+{
+  "name": "@local/dsh-local-settings",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "在 DSH 设置及插件详情中配置本地插件，并管理 B站扫码登录。",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  },
+  "files": [
+    "src",
+    "client.js",
+    "locale",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dependencies": {
+    "@local/dsh-bilibili": "github:AsakuraAOI/dsh-bilibili#v0.1.0",
+    "qrcode": "^1.5.4"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsakuraAOI/dsh-local-settings.git"
+  },
+  "homepage": "https://github.com/AsakuraAOI/dsh-local-settings#readme",
+  "bugs": {
+    "url": "https://github.com/AsakuraAOI/dsh-local-settings/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ]
+}

@@ -1,0 +1,3 @@
+- insert:
+    - id: local-plugin-settings
+      name: '@local/dsh-local-settings'
