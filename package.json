@@ -30,7 +30,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@local/dsh-bilibili": "github:AsakuraAOI/dsh-bilibili#v0.1.0",
+    "@local/dsh-bilibili": "github:AsakuraAOI/dsh-bilibili#3aa05a8508ab3720212300a45deac57feead0c53",
     "qrcode": "^1.5.4"
   },
   "scripts": {
